@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', addTask);
+
   const addButton = document.getElementById('add-task-btn');
   const taskInput = document.getElementById('task-input');
   const taskList = document.getElementById('task-list');
+  const placeholder = taskInput.placeholder;
 
   function addTask() {
     let taskText = taskInput.value.trim();
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', addTask);
       list.appendChild(newBtn);
       taskList.appendChild(list);
 
-      taskText === '';
+      taskInput.value = '';
     }
   }
 
